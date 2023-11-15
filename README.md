@@ -65,13 +65,15 @@ The Cypress configuration files include the following:
 ## Key Features
 - Clean Code: Readable and maintainable code structure.
 - Scalability: Functions and classes designed for reuse across multiple tests.
-- TypeScript Integration: Strong typing with TypeScript for better code quality and error handling.
-- Custom Commands: Extending Cypress with custom commands for common actions.
-- API Interception: Using cy.intercept to manage network requests for reliability.
 
-## TypeScript Setup
-- TypeScript is configured to enhance code quality and reliability.
-- Refer to tsconfig.json for TypeScript compiler options.
+## Using Docker to Run the Application
+
+### Dockerfile Overview
+Our Dockerfile is configured to set up an environment for running our React application and Cypress tests. It uses a Cypress-included image for ease of test execution.
+
+### Running the Application with Docker
+1. **Build the Docker Image**: Run `docker build -t cypress-app .` to build the Docker image.
+2. **Run the Container**: Use `docker run -it cypress-app ` to start the container. This will start the application on `localhost:3000` and execute the tests.
 
 ## Reporting
 
@@ -80,15 +82,12 @@ The Mochawesome reporter generates stylish HTML reports. After running the tests
 ## Dependencies
 The example tests utilize the following dependencies, listed in the package.json file:
  
-- Cypress: End-to-end testing framework.
-- Faker: For generating random test data.
-- TypeScript: Language implementation.
+- Cypress: End-to-end testing framework
 - Mocha: JavaScript test framework used by Cypress.
 - Mochawesome: Reporter for generating stylish HTML reports.
 - Mochawesome-merge: Tool for merging multiple Mochawesome reports.
 
 ## TODO (Improvements):
 - check on BrowserStack if solution runs on Windows and Linux Machines, since I tested only on Mac and docker.
-- Using docker images for execution of tests
 
 

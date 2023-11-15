@@ -21,8 +21,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress:run": "npx cypress run --headed --browser chrome",
-    "test:e2e": "concurrently \"npm start\" \"npm run cypress:run\""
+    "cypress:run": "npx cypress run",
+    "cypress:chrome": "npx cypress run --browser chrome",
+    "cypress:headed": "npx cypress run --headed --browser chrome",
+    "test:e2e": "concurrently \"npm start\" \"npm run cypress:run\"",
+    "test:chrome": "concurrently \"npm start\" \"npm run cypress:run\"",
+    "test:headed": "concurrently \"npm start\" \"npm run cypress:run\""
   },
   "eslintConfig": {
     "extends": [
