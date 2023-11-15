@@ -1,34 +1,94 @@
-# Getting Started with Create React App
+# Powerus Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
+This repository contains automated tests for PowerUs's Recruiting Bible platform, ensuring seamless signup for partners. The tests are designed with a focus on scalability, simplicity, and clean code practices.
 
-## Available Scripts
 
-In the project directory, you can run:
+## prerequisites
+- [nodejs](https://nodejs.org/en/)
+- npm
+- Chrome browser
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the example tests locally, follow these steps:
 
-### `npm test`
+1. Clone the repository to your local machine.
+2. Install Cypress and other dependencies by running the following command:
 
-Launches the test runner in the interactive watch mode.
+ ```shell
+npm install
+```
 
-### `npm run build`
+## Running the Tests
 
-Builds the app for production to the `build` folder.
+To execute the test, you can use the following commands:
 
-### `npm run eject`
+- Run all tests:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+npm run test:e2e
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Run all tests on the chrome browser:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```shell
+npm run test:chrome
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Run all the tests in headed mode:
 
-### Solution for task
+```shell
+npm run test:headed
+```
 
-To calculate the occupancy, we can sort the potential guests in descending order of their willingness to pay, and then loop through them. For each guest, we check if they are willing to pay more than EUR 100, and if so, we skip them. If they are willing to pay less than EUR 100 and there are available Premium rooms, we assign them a Premium room. Otherwise, we assign them an Economy room. We continue until there are no more available rooms.
+## Structure
+- cypress/integration/e2e/specs: Contains test suites.
+- cypress/integration/e2e/pageObjects/: Page object classes for encapsulating page-specific actions and elements.
+- cypress/fixtures/data.json: Test data.
+- cypress/reports: Contains Mocha Awseome reports after execution
+- cypress/videos: Contains Video recording of the test
+
+## Configuration
+
+The Cypress configuration files include the following:
+
+- `cypress.config.ts`:
+
+- Contains environment variables and configuration options for the tests.
+- The `basUrl` variable specifies the base URL of the web application under test.
+- Additional configuration options for Cypress.
+
+## Test Scenario
+- Automated steps for booking hotel app by premium and economy customers.
+
+## Key Features
+- Clean Code: Readable and maintainable code structure.
+- Scalability: Functions and classes designed for reuse across multiple tests.
+- TypeScript Integration: Strong typing with TypeScript for better code quality and error handling.
+- Custom Commands: Extending Cypress with custom commands for common actions.
+- API Interception: Using cy.intercept to manage network requests for reliability.
+
+## TypeScript Setup
+- TypeScript is configured to enhance code quality and reliability.
+- Refer to tsconfig.json for TypeScript compiler options.
+
+## Reporting
+
+The Mochawesome reporter generates stylish HTML reports. After running the tests, the reports can be found in the `cypress/reports/mochawesome-report` directory. Open the HTML report in any web browser to view the detailed test results.
+
+## Dependencies
+The example tests utilize the following dependencies, listed in the package.json file:
+ 
+- Cypress: End-to-end testing framework.
+- Faker: For generating random test data.
+- TypeScript: Language implementation.
+- Mocha: JavaScript test framework used by Cypress.
+- Mochawesome: Reporter for generating stylish HTML reports.
+- Mochawesome-merge: Tool for merging multiple Mochawesome reports.
+
+## TODO (Improvements):
+- check on BrowserStack if solution runs on Windows and Linux Machines, since I tested only on Mac and docker.
+- Using docker images for execution of tests
+
+

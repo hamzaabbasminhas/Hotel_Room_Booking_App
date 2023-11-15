@@ -12,7 +12,7 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:run": "npx cypress run --headed --browser chrome",
+    "test:e2e": "concurrently \"npm start\" \"npm run cypress:run\""
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cypress": "^13.5.1",
+    "cypress-mochawesome-reporter": "^3.6.1"
   }
 }

@@ -1,0 +1,17 @@
+{
+"TestData1":["3", "3"],
+"expectedResult":["Free Premium rooms: 0", "Free Economy rooms: 0", "Usage Premium: 3 (EUR 738)", "Usage Economy: 3 (EUR 167)"],
+
+"TestData2":["2", "7"],
+"expectedResult2":["Free Premium rooms: 0", "Free Economy rooms: 3", "Usage Premium: 2 (EUR 583)", "Usage Economy: 4 (EUR 189)"],
+
+"TestData3":["7", "1"],
+"expectedResult3":["Free Premium rooms: 0", "Free Economy rooms: 0", "Usage Premium: 7 (EUR 1153)", "Usage Economy: 1 (EUR 45)"],
+
+"TestData4":["7", "5"],
+"expectedResult4":["Free Premium rooms: 1", "Free Economy rooms: 1", "Usage Premium: 6 (EUR 1054)", "Usage Economy: 4 (EUR 189)"],
+
+"TestData5":["0", "0"],
+"expectedResult5":["Free Premium rooms: 0", "Free Economy rooms: 0", "Usage Premium: 0 (EUR 0)", "Usage Economy: 0 (EUR 0)"]
+
+}
