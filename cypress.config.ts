@@ -12,7 +12,7 @@ export default defineConfig({
     charts: true,
     overwrite: false,
     html: true,
-    json: true,
+    json: false,
     timestamp: "mmddyyyy_HHMMss"
     },
     baseUrl: 'http://localhost:3000/',
